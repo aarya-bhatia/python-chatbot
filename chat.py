@@ -4,8 +4,8 @@
 from datetime import datetime
 
 import account
-from app import bot
 import socketio
+import requests
 
 base_url = account.base_url
 sio = socketio.Client(engineio_logger=True, reconnection=True)
@@ -34,13 +34,14 @@ def message(data):
         print("Message sent: ", data["content"])
         return
 
-    reply = bot.get_response(data["content"])
+    response = requests.get('http://localhost:5000/response/' + data["content"])
+    content = response.text
 
     message = {
         'sender_id': account.user_id,
         'sender_name': f'{account.payload["first_name"]} {account.payload["last_name"]}',
         'sender': account.payload["username"],
-        'content': reply,
+        'content': content,
         'time': datetime.now().isoformat()
     }
 
