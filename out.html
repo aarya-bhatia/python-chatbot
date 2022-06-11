@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- site metadata -->
+    <meta name="description" content="Messenger App for live chat with friends" />
+    <meta name="keywords" content="Message, Messenger, Messaging, Chat, Web Sockets, NodeJS" />
+    <meta name="author" content="Aarya Bhatia" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Piedra&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- socket -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- Custom styles  -->
+    <link rel="stylesheet" href="/main.css" type="text/css" />
+
+    <title>Messenger</title>
+  </head>
+  <body>
+    <div class="p-2 container-fluid">
+      <div>
+        <a href="/">
+        <img
+          class="img-fluid"
+          src="/images/logo.png"
+          width="30"
+          height="30"
+          alt="logo"
+          loading="lazy"
+        />
+        </a>
+      </div>
+    </div>
+<div class="d-flex p-3 flex-column container-fluid text-center">
+  <div class="mt-4">
+    <h1> Rita Mae Brown </h1>
+    <p class="lead">Sorrow is how we learn to love.</p>
+    <p class="lead">
+      
+      <a href="/dashboard" class="btn btn-lg custom-btn">Dashboard</a>
+      
+    </p>
+  </div>
+</div>
+
+<hr>
+<footer>
+  <div class="text-center">
+    <nav class="nav justify-content-center">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/dashboard">Dashboard</a>
+      <a class="nav-link" href="/inbox">Inbox</a>
+       
+        <a class="nav-link" href="/settings">Settings</a>
+        <a class="nav-link" href="/sign-out">Sign Out</a>
+      
+    </nav>
+
+    <span class="text-muted small"
+  >Inspirational quotes provided by
+  <a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a></span
+>
+    <br>
+
+    <p>&copy; Aarya Bhatia 2022</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JavaScript -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"
+></script>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+  crossorigin="anonymous"
+></script>
+
+
+</body>
+</html>
