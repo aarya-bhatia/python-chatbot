@@ -1,5 +1,6 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
+from flask import Flask
 
 bot = ChatBot(
     'Buddy',
@@ -11,6 +12,18 @@ bot = ChatBot(
 
 corpus_trainer = ChatterBotCorpusTrainer(bot)
 corpus_trainer.train('chatterbot.corpus.english')
+
+app = Flask(__name__)
+
+
+@app.route('/response/<message>', methods=['GET'])
+def GET_response(message):
+    if not message:
+        return "", 400
+
+    response = bot.get_response(message)
+    print("BOT:", response)
+    return response.text, 200
 
 
 def main():
